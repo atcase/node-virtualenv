@@ -14,7 +14,7 @@ function warn(err) {
 
 env.install(function(err) {
   if (err) {
-    if (pkg.optional) {
+    if (pkg.virtualenv && pkg.virtualenv.optional) {
       warn(err);
       return;
     } else {
